@@ -28,6 +28,9 @@ class Board:
             if self.board[r][col] == 0:
                 return r
 
+    def is_full(self):
+        # Check if the board is full (no more empty spots)
+        return np.all(self.board != 0)
     def printBoard(board):
         print(np.flip(board, 0))
 
