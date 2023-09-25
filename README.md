@@ -43,7 +43,8 @@ The project is organized into several files and folders as follows:
     - `python GameRunner.py`
 - you can choose from 2 options play with AI and Train
 - click on Train it will play 50 matches with itself we can change the number of iterations by passing it during runtime 
-- Use the right and left arrow keys two Move the Coin and press enter to insert the coin
+- Use the right and left arrow keys two Move the Coin and press enter to insert the coin/
 
-![Alt text]()
-`
+- Use Train Agent Option before playing with it 
+To train the agent, select Train Computer in the main menu. It will play iterations games which was passed as an argument to the program.After training the computer, when 'vs Computer' option is selected, a human can play against the trained computer.Each time 'Train Computer' mode is selected, it trains from the beginning. The state space is all the states which each player sees. For the first player it consists all the boards with an even number of disks, while for the second player it is all the boards with an odd number of disks.The action space will be the numbers 1–7 for each column a player can play.The reward will be 1 for winning, -1 for losing, 0.5 for a tie and 0 otherwise. Note here that like in every 2-players’ game, the next state is not determined by the action taken because it depends also on the opponent’s action. The transition probability between 2 states depends on both the player’s and the opponent’s policies.
+
