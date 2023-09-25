@@ -35,15 +35,15 @@ The project is organized into several files and folders as follows:
 - `isFull.py`: Handles the logic for checking if a slot is full.
 
 ## Usage
-- use Following comman to cloan the reposatory
+- use the following command to clone the repository
   - `git clone https://github.com/YourUsername/Connect4-Reinforcement-Learning-Bot.git`
 - Download The Requirments
     - `pip install pygame`
 - To run the project simply execute the below command in your terminal
     - `python GameRunner.py`
-- you can choose form 2 options paly with AI and Train
-- click on Train it will play 50 matches with itself we can chane the number of iteration by passing it during runtime 
-- Use right and left arrow key two Move the Coin and press enter to insert the coin
+- you can choose from 2 options play with AI and Train
+- click on Train it will play 50 matches with itself we can change the number of iterations by passing it during runtime 
+- Use the right and left arrow keys two Move the Coin and press enter to insert the coin
 
-
+![Alt text]()
 `
