@@ -1,6 +1,6 @@
 from Player import Player
 from QLearningPlayer import QLearningPlayer
-from RandomPlayer import RandomPlayer
+from RandomChoice import RandomPlayer
 
 
 class ComputerPlayer(Player):

@@ -6,9 +6,9 @@ import pygame
 from Board import Board
 from Coin import Coin
 from isFull import isFull
-from ComputerPlayer import ComputerPlayer
-from GameLogic import GameLogic
-from HumanPlayer import HumanPlayer
+from AiPlayer import ComputerPlayer
+from CheckForWIn import GameLogic
+from Player2 import HumanPlayer
 from Slot import Slot
 BLUE = (0, 0, 255)
 WHITE = (255, 255, 255)
@@ -16,7 +16,7 @@ BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BOARD_SIZE = (7,6)
-
+YELLOW = (225 ,225 ,150)
 
 class GameView(object):
     """A class that represents the displays in the game"""
@@ -70,19 +70,14 @@ class GameView(object):
         """
         main_menu = True
         play_game = False
-        self.background.fill(WHITE)
+        self.background.fill(YELLOW)
         self.draw_menu()
 
         while main_menu:
             for event in pygame.event.get():
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     pos = pygame.mouse.get_pos()
-                    if self.rect1.collidepoint(pos):
-                        play_game = True
-                        main_menu = False
-                        game_mode = "two_player"
-
-                    elif self.rect2.collidepoint(pos):
+                    if self.rect2.collidepoint(pos):
                         play_game = True
                         main_menu = False
                         game_mode = "single"
@@ -215,19 +210,14 @@ class GameView(object):
         Draw the elements for the main menu screen
         """
         font = pygame.font.SysFont('mono', 60, bold=True)
-        self.title_surface = font.render('CONNECT 4', True, BLACK)
+        self.title_surface = font.render('CONNECT 4', True, GREEN)
         fw, fh = font.size('CONNECT 4')
         self.background.blit(self.title_surface, ((self.width - fw) // 2, 150))
-        two_player_text = '2 Player Mode'
         computer_player_text = 'vs Computer'
         train_text = 'Train Computer'
         quit_text = 'QUIT'
         font = pygame.font.SysFont('mono', 40, bold=True)
 
-        self.play_surface = font.render(two_player_text, True, BLACK)
-        fw, fh = font.size(two_player_text)
-        self.rect1 = self.play_surface.get_rect(topleft=((self.width - fw) // 2, 300))
-        self.background.blit(self.play_surface, ((self.width - fw) // 2, 300))
 
         computer_play_surface = font.render(computer_player_text, True, BLACK)
         fw, fh = font.size(computer_player_text)
