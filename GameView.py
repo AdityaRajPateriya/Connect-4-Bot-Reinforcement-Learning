@@ -3,11 +3,11 @@ import random
 
 import pygame
 
-from app.Board import Board
-from app.Coin import Coin
-from app.isFull import isFull
-from app.ComputerPlayer import ComputerPlayer
-from app.GameLogic import GameLogic
+from Board import Board
+from Coin import Coin
+from isFull import isFull
+from ComputerPlayer import ComputerPlayer
+from GameLogic import GameLogic
 from HumanPlayer import HumanPlayer
 from Slot import Slot
 BLUE = (0, 0, 255)
