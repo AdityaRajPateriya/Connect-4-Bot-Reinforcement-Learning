@@ -37,8 +37,13 @@ The project is organized into several files and folders as follows:
 ## Usage
 - use Following comman to cloan the reposatory
   - `git clone https://github.com/YourUsername/Connect4-Reinforcement-Learning-Bot.git`
-- Downlaod The Requirments
+- Download The Requirments
     - `pip install pygame`
-- To run project simply exacute the below comman in you termina
-    - `python GameRunner.py
+- To run the project simply execute the below command in your terminal
+    - `python GameRunner.py`
+- you can choose form 2 options paly with AI and Train
+- click on Train it will play 50 matches with itself we can chane the number of iteration by passing it during runtime 
+- Use right and left arrow key two Move the Coin and press enter to insert the coin
+
+
 `
